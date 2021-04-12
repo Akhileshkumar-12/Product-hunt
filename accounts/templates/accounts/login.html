@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 {% if error %}
-{{ error }}
-{% endif %}
+<script>
+    alert('{{ error }}')
+</script>
+{% endif %}`
+<style>
+div{
+    position:absolute;
+    right:250px;
+    top:100px;
+   }
+</style>
+<div>
 <h1>Login!</h1>
 <form method="POST" action="{% url 'login' %}">
     <br/>
@@ -16,8 +26,8 @@
     <input type="text" name="password"/>
     <br/>
     <br/>
-    <input type="submit" class="btn btn-primary"  value="Sign Up"/>
+    <input type="submit" class="btn btn-primary"  value="Log In"/>
 
 </form>
-
+</div>
 {% endblock %}
